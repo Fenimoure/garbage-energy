@@ -1,0 +1,61 @@
+# items
+item.GarbageEnergy.wrench.name=Гаечный ключ
+item.GarbageEnergy.dataCard.CommonCard.name=Дискета
+item.GarbageEnergy.dataCard.UncommonCard.name=Улучшенная дискета
+item.GarbageEnergy.dataCard.RareCard.name=Продвинутая дискета
+item.GarbageEnergy.dataCard.EpicCard.name=Промышленная дискета
+item.GarbageEnergy.dataCard.info=Хранит результаты сканирования %s предметов.
+
+# augments
+item.GarbageEnergy.augment.energyAmplifier1.name=Элементарный заряд
+item.GarbageEnergy.augment.energyAmplifier2.name=Совокупный заряд
+item.GarbageEnergy.augment.energyAmplifier3.name=Высоконакопленный заряд
+
+item.GarbageEnergy.augment.attenuateModifier1.name=Разрушитель пространства
+item.GarbageEnergy.augment.attenuateModifier2.name=Пространственно-временной разрушитель
+item.GarbageEnergy.augment.attenuateModifier3.name=Усиленный разрушитель времени
+
+# blocks
+tile.GarbageEnergy.generator.itemRf.name=Предметный RF генератор
+tile.GarbageEnergy.scanner.item.name=Сканер предметов
+
+# CoFHCore GUI tabs
+info.tab.GarbageEnergy.generator.0=Используйте этот генератор чтобы производить RF энергию из ресурсов, которые Вам не нужны.
+info.tab.GarbageEnergy.generator.itemRf.0=Для производства RF необходимо вставить в генератор дискету с информацией об предмете из которого необходимо вырабатывать енергию.
+info.tab.GarbageEnergy.generator.itemRf.1=Другие предметы, о которых дискета не содержит информации, кроме имеющих собственный енергетический модификатор, нельзя будет поместить в генератор.
+info.tab.GarbageEnergy.generator.itemRf.2=Не кладите сюда Ваши алмазы!
+
+info.tab.GarbageEnergy.scanner.item.0=Сканирует предметы и отображает их значение енергетического модификатора предметном генераторе.
+info.tab.GarbageEnergy.scanner.item.1=Вы можете поместить дискету в соотвествующий слот и после сканирования сохранить результат в неё.
+info.tab.GarbageEnergy.scanner.item.2=Записанная дискета может быть помещена в генератор для получения энергии из предметов, информацию о которых она содержит.
+
+info.GarbageEnergy.augment=Расширение
+info.GarbageEnergy.augment.levels.0=Требуется, чтобы предыдущие уровни расширения были установлены.
+info.GarbageEnergy.augment.levels.1=Используется высочайший уровень расширения.
+
+info.GarbageEnergy.augment.energyAmplifier=Предметный RF генератор: Усилитель производства энергии
+info.GarbageEnergy.augment.energyAmplifier.info=x%s Выход энергии
+
+info.GarbageEnergy.augment.attenuateModifier=Предметный RF генератор: Уменьшает время горения
+info.GarbageEnergy.augment.attenuateModifier.info=-%s%% за тик
+
+info.GarbageEnergy.generator.rfFromItem=RF с предмета
+info.GarbageEnergy.scanner.saveResult=Сохранить результат
+info.GarbageEnergy.scanner.reset=Сбросить результат
+info.GarbageEnergy.scanner.scanning=Идёт сканирование...
+info.GarbageEnergy.scanner.scanned=Сканирование завершено...
+info.GarbageEnergy.scanner.idle=Сканер простаивает...
+info.GarbageEnergy.scanner.idle.nei=Пожалуйста, поместите предмет в слот.
+info.GarbageEnergy.scanner.idle.disabled=Сканер выключен.
+info.GarbageEnergy.scanner.process=Процесс
+info.GarbageEnergy.scanner.leftTime=Оставшееся время
+info.GarbageEnergy.scanner.item=Предмет
+info.GarbageEnergy.scanner.energyModifier=Мод. енергии
+
+# Tooltips
+tooltip.EMC.unique=Собственный мод. енергии
+tooltip.EMC=x%s с %s
+tooltip.dataCard.containInfoAbout=Содержит информацию про:
+
+# creativetabs
+itemGroup.garbageEnergy=Garbage Energy
