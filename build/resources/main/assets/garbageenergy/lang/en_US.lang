@@ -1,9 +1,9 @@
 # items
 item.GarbageEnergy.wrench.name=Wrench
-item.GarbageEnergy.dataCard.CommonCard.name=Diskette
-item.GarbageEnergy.dataCard.UncommonCard.name=Upgraded Diskette
-item.GarbageEnergy.dataCard.RareCard.name=Advanced Diskette
-item.GarbageEnergy.dataCard.EpicCard.name=Industrial Diskette
+item.GarbageEnergy.dataCard.CommonCard.name=Disk
+item.GarbageEnergy.dataCard.UncommonCard.name=Uncommon disk
+item.GarbageEnergy.dataCard.RareCard.name=Rare disk
+item.GarbageEnergy.dataCard.EpicCard.name=Epick disk
 item.GarbageEnergy.dataCard.info=Stores scanning results for %s items.
 
 # augments
@@ -20,14 +20,14 @@ tile.GarbageEnergy.generator.itemRf.name=Item RF generator
 tile.GarbageEnergy.scanner.item.name=Item scanner
 
 # CoFHCore GUI tabs
-info.tab.GarbageEnergy.generator.0=Use this generator to produce energy from items you don't need.
-info.tab.GarbageEnergy.generator.itemRf.0=To generate RF energy you should put a disk into a generator.
-info.tab.GarbageEnergy.generator.itemRf.1=Items which have no their own energy modifier cannot be put into a generator.
-info.tab.GarbageEnergy.generator.itemRf.2=Don't put your diamonds to it!
+info.tab.GarbageEnergy.generator.0=Use this generator for produce energy from resources that you not needed.
+info.tab.GarbageEnergy.generator.itemRf.0=For producing RF you should put to genrator disk with information about items.
+info.tab.GarbageEnergy.generator.itemRf.1=Other items, except ithems that have own energy modifier, you cannot put to genrator.
+info.tab.GarbageEnergy.generator.itemRf.2=Do not put your diamonds to it!
 
-info.tab.GarbageEnergy.scanner.item.0=Scans items and shows their energy modifier in Item RF generator.
-info.tab.GarbageEnergy.scanner.item.1=You can put a floppy disk to appropriate slot to save scanning result to it.
-info.tab.GarbageEnergy.scanner.item.2=The recorded disk can be placed in the generator to generate energy using recorded information about objects.
+info.tab.GarbageEnergy.scanner.item.0=Scans items or blocks and shows energy modifier for it for Item RF generator.
+info.tab.GarbageEnergy.scanner.item.1=You can put card to appropriate slot and after scanning save result to it.
+info.tab.GarbageEnergy.scanner.item.2=The recorded card can be placed in the generator and you can generate energy from the objects information about which it contains.
 
 info.GarbageEnergy.augment=Augment
 info.GarbageEnergy.augment.levels.0=Requires previous levels to be installed.
@@ -36,10 +36,10 @@ info.GarbageEnergy.augment.levels.1=Highest Level Augment is used.
 info.GarbageEnergy.augment.energyAmplifier=Item RF generator: Energy output amplifier
 info.GarbageEnergy.augment.energyAmplifier.info=x%s Energy output
 
-info.GarbageEnergy.augment.attenuateModifier=Item RF generator: Decrease process time
+info.GarbageEnergy.augment.attenuateModifier=Item RF generator: Attunate process time
 info.GarbageEnergy.augment.attenuateModifier.info=-%s%% per tick
 
-info.GarbageEnergy.generator.rfFromItem=RF per item
+info.GarbageEnergy.generator.rfFromItem=RF * item
 info.GarbageEnergy.scanner.saveResult=Save result
 info.GarbageEnergy.scanner.reset=Reset result
 info.GarbageEnergy.scanner.scanning=Scanning...

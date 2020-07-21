@@ -5,8 +5,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.jmorg.garbageenergy.GarbageEnergy;
+import net.jmorg.garbageenergy.common.GarbageEnergyItem;
 import net.jmorg.garbageenergy.common.blocks.BaseBlock;
 import net.jmorg.garbageenergy.common.items.ItemBlockGenerator;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Blocks;
@@ -94,7 +96,7 @@ public class BlockGenerator extends BaseBlock
     @Override
     public boolean postInit()
     {
-        GameRegistry.addRecipe(itemRf, "I#I", "I I", "ROR", 'O', Blocks.obsidian, 'R', Items.redstone, 'I', Items.iron_ingot, '#', Blocks.iron_bars);
+        GameRegistry.addRecipe(itemRf, "I#I", "IBF", "RCR", 'C', Blocks.chest, 'F', Blocks.furnace, 'B', GarbageEnergyItem.machineBody.improved, 'R', Items.redstone, 'I', Items.iron_ingot, '#', Blocks.iron_bars);
 
         return true;
     }

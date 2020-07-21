@@ -1,10 +1,20 @@
 # items
 item.GarbageEnergy.wrench.name=Гаечный ключ
+
 item.GarbageEnergy.dataCard.CommonCard.name=Дискета
 item.GarbageEnergy.dataCard.UncommonCard.name=Необычная дискета
 item.GarbageEnergy.dataCard.RareCard.name=Редкая дискета
 item.GarbageEnergy.dataCard.EpicCard.name=Эпическая дискета
 item.GarbageEnergy.dataCard.info=Хранит результаты сканирования для %s предметов.
+
+
+item.GarbageEnergy.scmatrix.name=Сканирующая матрица
+
+item.GarbageEnergy.basemachineBody.name=Базовый корпус механизма
+item.GarbageEnergy.machineBody.CommonMachineBody.name=Стандартный корпус механизма
+item.GarbageEnergy.machineBody.UncommonMachineBody.name=Улучшенный корпус механизма
+item.GarbageEnergy.machineBody.RareMachineBody.name=Продвинутый корпус механизма
+item.GarbageEnergy.machineBody.EpicMachineBody.name=Промышленный корпус механизма
 
 # augments
 item.GarbageEnergy.augment.energyAmplifier1.name=Элементарный заряд

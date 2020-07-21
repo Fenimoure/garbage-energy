@@ -5,6 +5,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.jmorg.garbageenergy.GarbageEnergy;
+import net.jmorg.garbageenergy.common.GarbageEnergyItem;
 import net.jmorg.garbageenergy.common.blocks.BaseBlock;
 import net.jmorg.garbageenergy.common.blocks.generator.BlockGenerator;
 import net.jmorg.garbageenergy.common.items.ItemBlockGenerator;
@@ -19,6 +20,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+
+import static net.jmorg.garbageenergy.common.GarbageEnergyItem.machineBody;
 
 public class BlockScanner extends BaseBlock
 {
@@ -87,7 +90,7 @@ public class BlockScanner extends BaseBlock
     @Override
     public boolean postInit()
     {
-        GameRegistry.addRecipe(item, "III", "IDI", "BRB", 'D', Items.diamond, 'R', Items.redstone, 'I', Items.iron_ingot, 'B', Blocks.iron_block);
+        GameRegistry.addRecipe(item, "ISI", "URU", "BUB", 'I', Blocks.iron_block, 'S', GarbageEnergyItem.scel, 'U', machineBody.improved, 'R', machineBody.industrial, 'B', Blocks.redstone_block);
 
         return false;
     }

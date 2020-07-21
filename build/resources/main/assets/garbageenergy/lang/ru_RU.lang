@@ -1,10 +1,20 @@
 # items
 item.GarbageEnergy.wrench.name=Гаечный ключ
+
 item.GarbageEnergy.dataCard.CommonCard.name=Дискета
-item.GarbageEnergy.dataCard.UncommonCard.name=Улучшенная дискета
-item.GarbageEnergy.dataCard.RareCard.name=Продвинутая дискета
-item.GarbageEnergy.dataCard.EpicCard.name=Промышленная дискета
-item.GarbageEnergy.dataCard.info=Хранит результаты сканирования %s предметов.
+item.GarbageEnergy.dataCard.UncommonCard.name=Необычная дискета
+item.GarbageEnergy.dataCard.RareCard.name=Редкая дискета
+item.GarbageEnergy.dataCard.EpicCard.name=Эпическая дискета
+item.GarbageEnergy.dataCard.info=Хранит результаты сканирования для %s предметов.
+
+
+item.GarbageEnergy.scmatrix.name=Сканирующая матрица
+
+item.GarbageEnergy.basemachineBody.name=Базовый корпус механизма
+item.GarbageEnergy.machineBody.CommonMachineBody.name=Стандартный корпус механизма
+item.GarbageEnergy.machineBody.UncommonMachineBody.name=Улучшенный корпус механизма
+item.GarbageEnergy.machineBody.RareMachineBody.name=Продвинутый корпус механизма
+item.GarbageEnergy.machineBody.EpicMachineBody.name=Промышленный корпус механизма
 
 # augments
 item.GarbageEnergy.augment.energyAmplifier1.name=Элементарный заряд
@@ -22,15 +32,15 @@ tile.GarbageEnergy.scanner.item.name=Сканер предметов
 # CoFHCore GUI tabs
 info.tab.GarbageEnergy.generator.0=Используйте этот генератор чтобы производить RF энергию из ресурсов, которые Вам не нужны.
 info.tab.GarbageEnergy.generator.itemRf.0=Для производства RF необходимо вставить в генератор дискету с информацией об предмете из которого необходимо вырабатывать енергию.
-info.tab.GarbageEnergy.generator.itemRf.1=Другие предметы, о которых дискета не содержит информации, кроме имеющих собственный енергетический модификатор, нельзя будет поместить в генератор.
-info.tab.GarbageEnergy.generator.itemRf.2=Не кладите сюда Ваши алмазы!
+info.tab.GarbageEnergy.generator.itemRf.1=Другие предметы, о которых не содержит информации дискета, кроме тех что имеют собственный енерегический модификатор, нельзя будет положить в генератор.
+info.tab.GarbageEnergy.generator.itemRf.2=Не ложите сюда Ваши алмазы!
 
-info.tab.GarbageEnergy.scanner.item.0=Сканирует предметы и отображает их значение енергетического модификатора предметном генераторе.
-info.tab.GarbageEnergy.scanner.item.1=Вы можете поместить дискету в соотвествующий слот и после сканирования сохранить результат в неё.
-info.tab.GarbageEnergy.scanner.item.2=Записанная дискета может быть помещена в генератор для получения энергии из предметов, информацию о которых она содержит.
+info.tab.GarbageEnergy.scanner.item.0=Сканирует предметы или блоки и отображает значение енергетического модификатора для данного предмета в предметном генераторе.
+info.tab.GarbageEnergy.scanner.item.1=Вы можете поместить карту в соотвествующий слот и после сканирования сохранить результат в неё.
+info.tab.GarbageEnergy.scanner.item.2=Записанная карта может быть помещена в генератор и вы сможете генерировать энергию с предметов информацию о которых она содержит.
 
 info.GarbageEnergy.augment=Расширение
-info.GarbageEnergy.augment.levels.0=Требуется, чтобы предыдущие уровни расширения были установлены.
+info.GarbageEnergy.augment.levels.0=Требуется, чтобы предыдущие уровни были установлены.
 info.GarbageEnergy.augment.levels.1=Используется высочайший уровень расширения.
 
 info.GarbageEnergy.augment.energyAmplifier=Предметный RF генератор: Усилитель производства энергии
@@ -42,10 +52,10 @@ info.GarbageEnergy.augment.attenuateModifier.info=-%s%% за тик
 info.GarbageEnergy.generator.rfFromItem=RF с предмета
 info.GarbageEnergy.scanner.saveResult=Сохранить результат
 info.GarbageEnergy.scanner.reset=Сбросить результат
-info.GarbageEnergy.scanner.scanning=Идёт сканирование...
-info.GarbageEnergy.scanner.scanned=Сканирование завершено...
-info.GarbageEnergy.scanner.idle=Сканер простаивает...
-info.GarbageEnergy.scanner.idle.nei=Пожалуйста, поместите предмет в слот.
+info.GarbageEnergy.scanner.scanning=Сканирование...
+info.GarbageEnergy.scanner.scanned=Просканировано.
+info.GarbageEnergy.scanner.idle=Простаивание.
+info.GarbageEnergy.scanner.idle.nei=Поместите предмет в слот.
 info.GarbageEnergy.scanner.idle.disabled=Сканер выключен.
 info.GarbageEnergy.scanner.process=Процесс
 info.GarbageEnergy.scanner.leftTime=Оставшееся время

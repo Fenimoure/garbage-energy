@@ -9,12 +9,14 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.jmorg.garbageenergy.common.GarbageEnergyBlock;
 import net.jmorg.garbageenergy.common.GarbageEnergyItem;
 import net.jmorg.garbageenergy.common.blocks.generator.BlockGenerator;
 import net.jmorg.garbageenergy.common.blocks.generator.TileGeneratorBase;
 import net.jmorg.garbageenergy.common.blocks.scanner.BlockScanner;
 import net.jmorg.garbageenergy.common.gui.GuiHandler;
+import net.jmorg.garbageenergy.common.items.craftitems.ScannerMatrix;
 import net.jmorg.garbageenergy.crafting.RecipeManager;
 import net.jmorg.garbageenergy.network.FMLEventHandler;
 import net.jmorg.garbageenergy.network.GarbageEnergyPacket;
@@ -29,8 +31,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 
 @Mod(modid = GarbageEnergy.MODID, name = GarbageEnergy.MODNAME, guiFactory = GarbageEnergy.MODGUIFACTORY, version = GarbageEnergy.VERSION, dependencies = GarbageEnergy.DEPENDENCIES, customProperties = @Mod.CustomProperty(k = "cofhversion", v = "true"))
-public class GarbageEnergy extends BaseMod
-{
+public class GarbageEnergy extends BaseMod {
     public static final String MODID = "GarbageEnergy";
     public static final String MODNAME = "Garbage Energy";
     public static final String MODGUIFACTORY = "net.jmorg.garbageenergy.common.gui.GuiFactory";
@@ -46,23 +47,20 @@ public class GarbageEnergy extends BaseMod
     public static final ConfigHandler configClient = new ConfigHandler(VERSION);
     public static final GuiHandler guiHandler = new GuiHandler();
 
-    public GarbageEnergy()
-    {
+    public GarbageEnergy() {
         super(log);
     }
 
-    public static final CreativeTabs garbageEnergyTab = new CreativeTabs("garbageEnergy")
-    {
+    public static final CreativeTabs garbageEnergyTab = new CreativeTabs("garbageEnergy") {
         @Override
-        public Item getTabIconItem()
-        {
+        public Item getTabIconItem() {
             return BlockGenerator.itemRf.getItem();
         }
     };
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
+    public void preInit(FMLPreInitializationEvent event) {
+
         UpdateManager.registerUpdater(new UpdateManager(this, RELEASEURL, CoFHProps.DOWNLOAD_URL));
         config.setConfiguration(new Configuration(new File(CoFHProps.configDir, "cofh/garbageenergy/common.cfg"), true));
         configClient.setConfiguration(new Configuration(new File(CoFHProps.configDir, "cofh/garbageenergy/client.cfg"), true));
@@ -73,8 +71,7 @@ public class GarbageEnergy extends BaseMod
     }
 
     @Mod.EventHandler
-    public void initialize(FMLInitializationEvent event)
-    {
+    public void initialize(FMLInitializationEvent event) {
         // Common minecraft content.
         GarbageEnergyBlock.registerBlocks();
         GarbageEnergyItem.registerItems();
@@ -90,8 +87,7 @@ public class GarbageEnergy extends BaseMod
     }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event)
-    {
+    public void postInit(FMLPostInitializationEvent event) {
         GarbageEnergyBlock.postInit();
         GarbageEnergyItem.postInit();
 
@@ -99,8 +95,7 @@ public class GarbageEnergy extends BaseMod
     }
 
     @Mod.EventHandler
-    public void loadComplete(FMLLoadCompleteEvent event)
-    {
+    public void loadComplete(FMLLoadCompleteEvent event) {
         // Clean up configs.
         cleanConfig();
         config.cleanUp(false, true);
@@ -110,25 +105,21 @@ public class GarbageEnergy extends BaseMod
     }
 
     @Mod.EventHandler
-    public void serverStart(FMLServerAboutToStartEvent event)
-    {
+    public void serverStart(FMLServerAboutToStartEvent event) {
     }
 
     @Mod.EventHandler
-    public void serverStarting(FMLServerStartedEvent event)
-    {
+    public void serverStarting(FMLServerStartedEvent event) {
         handleIdMapping();
         RecipeManager.initialize();
     }
 
-    public synchronized void handleIdMapping()
-    {
+    public synchronized void handleIdMapping() {
         BlockGenerator.refreshItemStacks();
         BlockScanner.refreshItemStacks();
     }
 
-    public void handleConfigSync(PacketCoFHBase payload)
-    {
+    public void handleConfigSync(PacketCoFHBase payload) {
         handleIdMapping();
 
         TileGeneratorBase.enableSecurity = payload.getBool();
@@ -136,8 +127,7 @@ public class GarbageEnergy extends BaseMod
         log.info("Receiving Server Configuration...");
     }
 
-    public PacketCoFHBase getConfigSync()
-    {
+    public PacketCoFHBase getConfigSync() {
         PacketCoFHBase payload = GarbageEnergyPacket.getPacket(GarbageEnergyPacket.PacketTypes.CONFIG_SYNC);
 
         payload.addBool(TileGeneratorBase.enableSecurity);
@@ -145,8 +135,7 @@ public class GarbageEnergy extends BaseMod
         return payload;
     }
 
-    void cleanConfig()
-    {
+    void cleanConfig() {
         // Common
         String[] categoryNames = config.getCategoryNames().toArray(new String[config.getCategoryNames().size()]);
         for (String name : categoryNames) {
@@ -161,20 +150,17 @@ public class GarbageEnergy extends BaseMod
     }
 
     @Override
-    public String getModId()
-    {
+    public String getModId() {
         return MODID;
     }
 
     @Override
-    public String getModName()
-    {
+    public String getModName() {
         return MODNAME;
     }
 
     @Override
-    public String getModVersion()
-    {
+    public String getModVersion() {
         return VERSION;
     }
 }
